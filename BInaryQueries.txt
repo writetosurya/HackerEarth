@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<math.h>
+void main()
+{
+    int i,n,q,t,x,l,r;
+    scanf("%d%d",&n,&q);
+    int arr[n];
+    for(i=1;i<=n;i++)
+        scanf("%d",&arr[i]);
+    for(i=1;i<=q;i++)
+    {
+        scanf("%d",&t);
+        if(t==1)
+        {
+            scanf("%d",&x);
+            if(arr[x]==0)
+                arr[x]=1;
+            else
+                arr[x]=0;
+        }
+        else if(t==0)
+        {
+            scanf("%d%d",&l,&r);
+            if(arr[r])
+                printf("ODD\n");
+            else
+                printf("EVEN\n");
+        }
+
+    }
+}
